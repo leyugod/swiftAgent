@@ -1,0 +1,85 @@
+# SwiftLint 配置文件
+
+# 排除的目录
+excluded:
+  - .build
+  - .swiftpm
+  - Examples
+  - Tests/SwiftAgentTests/Mocks
+
+# 禁用的规则
+disabled_rules:
+  - trailing_whitespace
+  - todo
+  - line_length  # 我们有很多长行的文档注释
+
+# 启用的可选规则
+opt_in_rules:
+  - empty_count
+  - empty_string
+  - explicit_init
+  - first_where
+  - force_unwrapping
+  - implicitly_unwrapped_optional
+  - operator_usage_whitespace
+  - sorted_first_last
+
+# 文件长度
+file_length:
+  warning: 500
+  error: 1000
+
+# 函数体长度
+function_body_length:
+  warning: 50
+  error: 100
+
+# 类型体长度
+type_body_length:
+  warning: 300
+  error: 500
+
+# 函数参数长度
+function_parameter_count:
+  warning: 6
+  error: 8
+
+# 类型名称
+type_name:
+  min_length: 3
+  max_length: 40
+
+# 标识符名称
+identifier_name:
+  min_length: 2
+  max_length: 40
+  excluded:
+    - id
+    - to
+    - at
+    - in
+    - on
+    - up
+
+# 嵌套类型级别
+nesting:
+  type_level: 2
+
+# 强制类型转换
+force_cast: warning
+force_try: warning
+
+# Cyclomatic 复杂度
+cyclomatic_complexity:
+  warning: 15
+  error: 25
+
+# 自定义规则
+custom_rules:
+  # 禁止使用 print，应该使用 Logger
+  no_print:
+    name: "No Print"
+    regex: "\\bprint\\("
+    message: "请使用 Logger 代替 print"
+    severity: warning
+
