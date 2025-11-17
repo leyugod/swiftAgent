@@ -27,6 +27,12 @@ SwiftAgent 是一个完整的、生产就绪的智能体开发框架，旨在帮
 
 ## 快速开始
 
+### 📖 教程和示例
+
+- **🚀 快速开始**: [QUICKSTART.md](QUICKSTART.md) - 5分钟快速上手
+- **📱 完整教程**: [TUTORIAL_SwiftUI_Streaming.md](TUTORIAL_SwiftUI_Streaming.md) - SwiftUI 流式输出详细教程
+- **💻 示例项目**: [SwiftAgentChatExample/](SwiftAgentChatExample/) - 完整的聊天应用示例
+
 ### 安装
 
 #### Swift Package Manager
@@ -35,7 +41,7 @@ SwiftAgent 是一个完整的、生产就绪的智能体开发框架，旨在帮
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/your-repo/SwiftAgent.git", from: "1.0.0")
+    .package(url: "https://github.com/leyugod/swiftAgent.git", from: "1.0.0")
 ]
 ```
 
@@ -267,11 +273,26 @@ print(report.generateReport())
 
 ## 示例项目
 
-查看 `Examples/` 目录获取完整示例：
+### 🎯 SwiftUI 聊天应用示例
 
-- **SimpleAgent**: 基础 Agent 使用示例
-- **TravelAssistant**: 智能旅行助手（集成工具调用）
-- **MultiAgentSystem**: 多智能体协作示例
+查看 [SwiftAgentChatExample/](SwiftAgentChatExample/) 目录获取完整的生产级聊天应用示例：
+
+- ✅ 完整的 SwiftUI 界面设计
+- ✅ 实时流式输出（逐字显示）
+- ✅ 工具调用演示（计算器、日期时间）
+- ✅ 消息历史管理
+- ✅ 错误处理和重试
+- ✅ 跨平台支持（iOS & macOS）
+
+**运行示例：**
+
+```bash
+cd SwiftAgentChatExample
+export OPENAI_API_KEY="your-api-key"
+swift run
+```
+
+详细说明请查看 [SwiftAgentChatExample/README.md](SwiftAgentChatExample/README.md)
 
 ## 技术栈
 
